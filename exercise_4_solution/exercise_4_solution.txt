@@ -1,0 +1,11 @@
+Here's what I modified in my .tmux.conf file:
+
+1. Turned re-number on so tmux windows renumber automatically when closed using the 'set-option' command:
+set -g renumber-windows on 
+
+2. Changed tmux terminal colors using xterm-256colors (the default, sanctioned color library for tmux):
+set -g default-terminal "screen-256color:"
+set -ga terminal-overrides ",xterm-256colors:Tc"
+
+3. Changed tmux window color scheme for split screens:
+setw -g window-style fg=colour240,bg=colour235 
