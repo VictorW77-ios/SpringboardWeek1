@@ -1,0 +1,44 @@
+I do not have any .xml files in my user directory (/victor/), so I output all files without the given conditions (numbers, dash, or a t)
+
+../.cache/mozilla
+../../.cache/mozilla/firefox
+../../.cache/samba
+../../.cache/yelp
+../../Public
+../../.zshrc
+../../.bashrc_orig
+../../.bash_profile
+../../.local
+../../.local/share
+../../.local/share/keyrings
+../../.local/share/Trash
+../../.local/share/Trash/info
+../../.local/share/Trash/expunged
+../../.local/share/Trash/files
+../../.config
+../../.config/menus
+../../.config/pluma
+../../.config/pluma/pluma.ini
+../../.config/pluma/accels
+../../.config/pulse
+../../.config/pulse/cookie
+../../.config/dconf
+../../.config/dconf/user
+../../.config/yelp
+../../.config/caja
+../../.config/caja/accels
+../../Downloads
+../../junk
+../../junk/springboard
+../../junk/springboard/README.md
+../../junk/config_file
+../../junk/bin
+../../.vimrc
+../../.ssh
+../../Music
+
+.xml files 1-liner: 
+cat > exercise_2_solution.txt | find ../../ | egrep -v '[[:digit:]]' | egrep -v '\-|t' | egrep '.xml' | xargs -n 1 echo >> exercise_2_solution.txt 
+
+general file 1-liner: 
+cat > exercise_2_solution.txt | find ../../ | egrep -v '[[:digit:]]' | egrep -v '\-|t' | xargs -n 1 echo >> exercise_2_solution.txt
